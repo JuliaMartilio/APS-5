@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboards de Gerenciamento</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Ubuntu', sans-serif !important;
+            margin-top: 80px;
+            background-color: #fff;
+            display: flex;
+        }
+        .header {
+            width: 100%;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            background-color: #fff;
+        }
+        .card-home {
+            padding: 10px;
+            margin: 10px;
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.01);
+            transition: box-shadow 1s ease-in-out;
+            border-radius: 10px;
+            background-color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+        }
+        .card-search {
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            word-wrap: break-word;
+            background: #2a583b;
+            background-clip: border-box;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        #grafico1, #grafico2 {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-right: 10px;
+            margin-left: 10px;
+            text-align: center;
+        }
+        #monitoramento {
+            border-radius: 10px;
+            background: #2a583b;
+            margin-bottom: 20px;
+            font-family: 'Ubuntu', sans-serif;
+            padding: 10px;
+        }
+        #monitoramento h5 {
+            margin-top: 2px;
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+        }
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto !important;
+            margin-left: auto !important;
+            max-width: 100%;
+        }
+        main{
+            display: flex;
+        }
+        #chart {
+            width: 100%;
+            height: 100%;
+            margin-right: 20px;
+            display: inline-block;
+        }
+        .map-container {
+            display: flex;
+            margin-top: 1.5rem;
+            width: 100%;
+            max-height: 100%;
+        }
+        .card-title {
+            color: #fff;
+        }
+        .nav-icon {
+            display: flex; 
+            align-items: center;
+            margin-right: 1.5rem;
+        }
+        p {
+            color: #e3e1d1;
+            font-size: .75rem;
+            border-bottom: 1px solid #e3e1d1;
+        }
+        .mt-4 {
+            text-align: center;
+        }
+        #graficos {
+            display: flex;
+            height: 400px;
+        }
+
+    @media (max-width: 500px) {
+        .map-container {
+            flex-direction: column;
+        }
+        main {
+            display: block;
+        }
+        #graficos {
+            flex-direction: column;
+        }
+        #grafico1 {
+            margin-bottom: 1rem;
+        }
+        #chart {
+            margin: 0;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+    }   
+    </style>
+</head>
+<body>
+    <header class="header fixed-top">
+        <nav class="nav d-flex justify-content-between align-items-center">
+            <div class="nav-logo">
+                <img class="nav-logo-colorida" loading="lazy" src="../img/logosite2.png" alt="Logo da Empresa"/>
+            </div>
+            <div class="nav-icon">
+                <a href="../login/login.html"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #2a583b; font-size: larger;"></i></a>
+            </div>
+        </nav>
+    </header>
+    <div class="map-container">
+        <div class="mt-3">
+            <div class="card-search" style="margin-right: 20px; margin-left: 20px;">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">Restaurantes</h5>
+                    <div class="mt-4">
+                        <div class="restaurante">
+                            <p>La Bella Cucina</p>
+                            <p>Cantinho Mineiro</p>
+                            <p>Tacos Los Hermanos</p>
+                            <p>Sabores do Dragão</p>
+                            <p>Bistro Vila Santiago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3" id="chart">
+            <div id="monitoramento">
+                <h5 class="text-center">Gráficos De Monitoramento</h5>
+            </div>
+            <div id="graficos">
+                <div id="grafico1" style="background: blue;">grafico 1</div>
+                <div id="grafico2" style="background: red;">grafico 2</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="dashboardJS.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+[
+    {
+        "restaurante": "La Bella Cucina",
+        "data_previsao": "2024-04-03",
+        "porcentagem_consumo": 65.15127741395588,
+        "lixeiras_adicionais": 0
+    },
+    {
+        "restaurante": "Sabores do Dragão",
+        "data_previsao": "2024-04-03",
+        "porcentagem_consumo": 65.15127741395588,
+        "lixeiras_adicionais": 0
+    },
+    {
+        "restaurante": "Cantinho Mineiro",
+        "data_previsao": "2024-04-03",
+        "porcentagem_consumo": 106.58724980937201,
+        "lixeiras_adicionais": 1
+    },
+    {
+        "restaurante": "Tacos dos Hermanos",
+        "data_previsao": "2024-04-03",
+        "porcentagem_consumo": 96.22825671051798,
+        "lixeiras_adicionais": 0
+    },
+    {
+        "restaurante": "Bistrô Vila Santiago",
+        "data_previsao": "2024-04-03",
+        "porcentagem_consumo": 116.94624290822604,
+        "lixeiras_adicionais": 1
+    }
+]
